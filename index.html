@@ -11,11 +11,6 @@
 </head>
 
 <body>
-    <div class="city"></div>
-    <div class="wind"></div>
-    <div class="humidity"></div>
-    <div class="temp"></div>
-
     <div class="card">
         <div class="card-header">
             Weather Dashboard
@@ -23,17 +18,20 @@
         <div class="card-body">
             <h5 class="card-title">Welcome to the City Weather Dashboard!</h5>
             <p class="card-text">With this website, you can type a city into the search bar and receive weather
-                information for today and the next five days.</p>            
+                information for today and the next five days.</p>
         </div>
     </div>
-    <div class="row g-3 align-items-center">
-        <div class="col-auto">
-            <label for="searchBar" class="col-form-label">Search</label>
-        </div>
-        <div class="col-auto">
-            <input type="search" id="searchBar" class="form-control" placeholder="Search for a City..."
-                aria-label="searchBarInline">
-        </div>                
+    <form id="city-form">
+        <label for="city-input">Search for a city</label>
+        <input type="text" id="city-input"><br>
+
+        <!-- This button will trigger our AJAX call -->
+        <input id="find-city" type="submit" value="City Search">
+    </form>
+
+    <!-- We'll be dumping our JSON contents in here -->
+    <div id="city-view"></div>
+    </div>
     </div>
 
 
@@ -45,6 +43,11 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+
+    <div class="city"></div>
+    <div class="wind"></div>
+    <div class="humidity"></div>
+    <div class="temp"></div>
 </body>
 
 </html>
