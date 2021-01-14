@@ -1,21 +1,18 @@
-.card-header {
-    text-align: center;
-    font-weight: bold;
+.container {
+    height: 200px;    
+    position: relative;
 }
 
-.card-title {
-    text-align: center;
-    font-weight: lighter;
+#fivedayweather-view {
+    float: right;
 }
 
-.card-text {
+.jumbotron {
     text-align: center;
+    font-weight: bolder;
+
 }
 
-.row.g-3.align-items-center {
-    padding: 25px;
-}
-
-h5 {
-    text-align: center;
+.row.weatherview {
+    float: left;
 }
